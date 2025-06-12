@@ -1,0 +1,5 @@
+
+
+As a user 
+I want to enter 2 numbers and get division done automatically.
+So that I don’t divide numbers on a paper.

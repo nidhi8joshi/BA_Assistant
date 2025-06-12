@@ -1,0 +1,65 @@
+        div .pane-container {
+            font-family: sans-serif;
+            margin: 0;
+            display: flex;
+        }
+
+        .container {
+            display: flex;
+            width: 100%;
+        }
+
+        .left-pane {
+            border-color: #007bff;
+            border-style: groove;
+            border-width: 1px;
+            background-color: #f0f0f0;
+            padding: 20px;
+            flex: 0 0 100px; /* Fixed width for left pane */
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .nav-button {
+            padding: 10px 15px;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            text-align: center;
+            cursor: pointer;
+            background-color: #fff;
+        }   
+           .nav-button.active {
+            background-color: #d0e0ff;
+            /* Example active state color */
+            border-color: #007bff;
+        }
+
+        .middle-pane {
+            border-color: #007bff;
+            border-style: groove;
+            border-width: 1px;
+            padding: 20px;
+            flex-direction: row;
+            justify-content: top;
+            flex: 1;
+            /* Pushes chat input to bottom */
+        }
+
+        h2{
+            margin-top: 15px;
+            margin-bottom: 15px;
+            color: #333;
+            text-align: center;
+            font-family: sans-serif;
+        }
+
+         h3 {
+            margin-top: 5px;
+            margin-bottom: 5px;
+            color: #333;
+            text-align: center;
+            font-family: sans-serif;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }

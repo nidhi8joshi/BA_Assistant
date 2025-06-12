@@ -1,0 +1,6 @@
+   .middle-pane {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            /* Pushes chat input to bottom */
+        }
