@@ -1,0 +1,59 @@
+Feature: Division operation
+  As a user
+  I want to divide one number by another
+  So that I can get the correct quotient or an appropriate error message
+
+  Background:
+    Given a calculator is initialized
+
+  Scenario: Divide two positive numbers
+    When I divide 10 by 2
+    Then the result should be 5
+
+  Scenario: Divide a positive number by a negative number
+    When I divide 10 by -2
+    Then the result should be -5
+
+  Scenario: Divide a negative number by a positive number
+    When I divide -10 by 2
+    Then the result should be -5
+
+  Scenario: Divide two negative numbers
+    When I divide -10 by -2
+    Then the result should be 5
+
+  Scenario: Divide a number by 1
+    When I divide 25 by 1
+    Then the result should be 25
+
+  Scenario: Divide a number by itself
+    When I divide 15 by 15
+    Then the result should be 1
+
+  Scenario: Divide zero by a number
+    When I divide 0 by 5
+    Then the result should be 0
+
+  Scenario: Divide a number by zero
+    When I divide 5 by 0
+    Then an error should be shown with message "Cannot divide by zero"
+
+  Scenario: Divide zero by zero
+    When I divide 0 by 0
+    Then an error should be shown with message "Indeterminate form"
+
+  Scenario: Divide a decimal number by a whole number
+    When I divide 7.5 by 3
+    Then the result should be 2.5
+
+  Scenario: Divide a whole number by a decimal
+    When I divide 10 by 4.0
+    Then the result should be 2.5
+
+  Scenario: Divide two decimal numbers
+    When I divide 9.6 by 3.2
+    Then the result should be 3
+
+  Scenario: High precision division
+    When I divide 1 by 3
+    Then the result should be approximately 0.3333 with a tolerance of 0.0001
